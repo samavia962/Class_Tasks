@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>GST Calculator</title>
+  <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <script src="script.js"></script>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Sr#</th>
+          <th>Item</th>
+          <th>Unit Cost</th>
+          <th>Quantity</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Item 1</td>
+          <td>58</td>
+          <td><input type="number" id="qty1" value="0" min="0"></td>
+          <td id="cost1">0</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Item 2</td>
+          <td>46</td>
+          <td><input type="number" id="qty2" value="0" min="0"></td>
+          <td id="cost2">0</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Item 3</td>
+          <td>1090</td>
+          <td><input type="number" id="qty3" value="0" min="0"></td>
+          <td id="cost3">0</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Total</td>
+          <td id="total">0</td>
+        </tr>
+        <tr>
+          <td colspan="4">GST (15%)</td>
+          <td id="gst">0</td>
+        </tr>
+        <tr>
+          <td colspan="4">Grand Total</td>
+          <td id="grandTotal">0</td>
+        </tr>
+      </tfoot>
+    </table>
+    <button id="calculateBtn">Calculate</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

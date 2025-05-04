@@ -1,0 +1,39 @@
+.parent{
+    background-color: yellow;
+    height: 300px;
+    width: 300px;
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+
+    position: relative;
+}
+ .child{
+    background-color: rebeccapurple;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+  
+  bottom: 0px;
+  right: 0px;
+} 
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.section{
+    height: 400px;
+    background-color: red;
+    
+
+    position: relative;
+}
+
+.sec1{
+
+}

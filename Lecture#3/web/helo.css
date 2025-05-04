@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Section styling */
+.section {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    flex-wrap: wrap; /* Adjust items if space is limited */
+    list-style-type: none;
+    background-color: black;
+}
+
+.navbar li {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-right: 1px solid gray;
+    flex: 1; /* Make items take equal space */
+    text-align: center;
+}
+
+.navbar li:last-child {
+    border-right: none; /* Remove the border for the last item */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    padding: 10px;
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.nav-item:hover .sub-menu {
+    display: block; /* Show submenu on hover */
+}
+
+.sub-menu li {
+    padding: 5px 10px;
+    border-bottom: 1px solid gray;
+}
+
+.sub-menu li:last-child {
+    border-bottom: none;
+}
+
+/* Content area styling */
+.content_area {
+    display: flex;
+    flex-wrap: wrap; /* Adjust layout for smaller screens */
+    margin: 10px;
+}
+
+.left {
+    width: 60%;
+    padding: 10px;
+}
+
+.right {
+    width: 40%;
+    padding: 10px;
+}
+
+.right img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .content_area {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .left, .right {
+        width: 100%; /* Full width for each section */
+    }
+
+    .navbar li {
+        font-size: 14px;
+    }
+
+    .overlay {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items */
+        text-align: center;
+    }
+
+    .navbar li {
+        border-right: none;
+        border-bottom: 1px solid gray;
+    }
+
+    .navbar li:last-child {
+        border-bottom: none;
+    }
+
+    .overlay {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .right img {
+        max-height: 150px;
+    }
+}

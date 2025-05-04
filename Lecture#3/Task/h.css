@@ -1,0 +1,253 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Header Section */
+.header {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+}
+.header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.header div {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Navbar Section */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #333;
+    padding: 0.5rem;
+  }
+  
+  .nav-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-item > a {
+    text-decoration: none;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    display: block;
+  }
+  
+  .nav-item > a:hover {
+    background-color: #575757;
+  }
+  
+  .sub-menu {
+    list-style: none;
+    position: absolute;
+    background-color: #444;
+    margin: 0;
+    padding: 0;
+    display: none;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sub-menu li {
+    border-bottom: 1px solid #555;
+  }
+  
+  .sub-menu li:last-child {
+    border-bottom: none;
+  }
+  
+  .sub-menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    display: block;
+  }
+  
+  .sub-menu li a:hover {
+    background-color: #575757;
+  }
+  
+  .nav-item:hover .sub-menu {
+    display: block;
+  }
+  
+
+/* Main Content Section */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+}
+.content-section {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+.text-section {
+    flex: 70%;
+    position: relative;
+    color: rgb(20, 20, 20);
+    padding: 20px;
+    background: rgba(236, 232, 232, 0.6);
+}
+.image-section {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.image-section img {
+    width: 60%;
+    height: auto;
+
+}
+.image-section h3{
+    align-items: center;
+    justify-content: center;
+}
+
+/* .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center/cover;
+    z-index: -1;
+} */
+h1 {
+    color: #bbe5f8;
+}
+.important-dates table {
+    width: 70%;
+    border-collapse: collapse;
+}
+.important-dates th, .important-dates td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+.important-dates th {
+    background: #cc0000;
+    color: white;
+}
+.footer {
+    background: #1f1818;
+    color: rgb(252, 237, 237);
+    text-align: center;
+    padding: 20px;
+}
+.sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.sponsors img {
+    height: 80px;
+}
+
+/* Media Queries for Responsiveness */
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .header {
+        height: 200px;
+    }
+    .header div {
+        font-size: 18px;
+    }
+    .navbar {
+        display: block;
+    }
+    .nav-items {
+        display: block;
+    }
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+    .nav-item a {
+        padding: 10px;
+    }
+    .content-section {
+        flex-direction: column;
+    }
+    .text-section, .image-section {
+        flex: 100%;
+    }
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Tablet Devices */
+@media (min-width: 601px) and (max-width: 900px) {
+    .header {
+        height: 250px;
+    }
+    .header div {
+        font-size: 22px;
+    }
+    .content-section {
+        flex-direction: row;
+    }
+    .text-section, .image-section {
+        flex: 50%;
+    }
+}
+
+/* Laptop and Desktop Devices */
+@media (min-width: 901px) {
+    .header {
+        height: 300px;
+    }
+    .header div {
+        font-size: 24px;
+    }
+    .content-section {
+        flex-direction: row;
+    }
+    .text-section, .image-section {
+        flex: 50%;
+    }
+}
